@@ -1,0 +1,217 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f8fc;
+    color: #172b4d;
+    line-height: 1.6;
+}
+
+/* Navigation header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px 6%;
+    background-color: #092b50;
+    color: white;
+}
+
+/* Logo on the left */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    font-size: 32px;
+}
+
+/* Navigation links */
+.navbar {
+    flex: 1;
+    max-width: 650px;
+    margin-left: auto;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ffc857;
+}
+
+.navbar a.active {
+    border-bottom: 3px solid #ffc857;
+}
+
+/* Welcome section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 70px 6%;
+    min-height: 75vh;
+}
+
+/* Welcome text on the left */
+.hero-content {
+    flex: 1;
+    max-width: 540px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #b87908;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+    color: #092b50;
+}
+
+.hero-content h1 span {
+    color: #c58a19;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #5b6880;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+/* Call-to-action button */
+.hero-button {
+    display: inline-block;
+    background-color: #092b50;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #164d7d;
+    transform: translateY(-2px);
+}
+
+/* Library image on the right */
+.hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(9, 43, 80, 0.15);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #68758a;
+    font-size: 14px;
+}
+
+/* Responsive layout for tablets and phones */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .navbar ul {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+        padding: 45px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar ul {
+        gap: 8px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero-image img {
+        height: 230px;
+    }
+}
